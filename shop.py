@@ -105,7 +105,7 @@ tb3_price = Products[2][1] * (how_many3 - how_many_r3)
 
 VAT = 23
 VAT2 = (1 + VAT / 100)
-full_price = tb1_price + tb2_price + tb13_price
+full_price = tb1_price + tb2_price + tb3_price
 full_price_VAT = full_price * VAT2
 
 print ("The price is: ", full_price, "PLN/net", "that is", full_price_VAT, "PLN/gross")
