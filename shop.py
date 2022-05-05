@@ -99,13 +99,13 @@ while decision2 == True:
         decision2 = False
         break
 
-TB1_price = Products[0][1] * (how_many - how_many_r)
-TB2_price = Products[1][1] * (how_many2 - how_many_r2)
-TB3_price = Products[2][1] * (how_many3 - how_many_r3)
+tb1_price = Products[0][1] * (how_many - how_many_r)
+tb2_price = Products[1][1] * (how_many2 - how_many_r2)
+tb3_price = Products[2][1] * (how_many3 - how_many_r3)
 
 VAT = 23
 VAT2 = (1 + VAT / 100)
-full_price = TB1_price + TB2_price + TB3_price
+full_price = tb1_price + tb2_price + tb13_price
 full_price_VAT = full_price * VAT2
 
 print ("The price is: ", full_price, "PLN/net", "that is", full_price_VAT, "PLN/gross")
@@ -118,3 +118,4 @@ mobile = input("mobile: ")
 address = input("address: ")
 
 print ("Summary of your order", "\nCost: ", full_price, "PLN/net", "that is", full_price_VAT, "PLN/gross", "\nAddress details:",  name.capitalize(), surname.capitalize(), email,  mobile, address)
+
