@@ -12,31 +12,31 @@ for productName, price, quantity in Products:
     print("In stock:", quantity)
     print("\n")
 
-HowMany = 0
-HowMany2 = 0
-HowMany3 = 0
+how_many = 0
+how_many2 = 0
+how_many3 = 0
 
 decision = True
 while decision == True:
     choice = input("T-Shirt number: ")
-    if (choice == "1"):
+    if choice == "1":
         print("The price is:", Products[0][1], "PLN/net", "In stock: ", Products[0][2])
-        if (choice == "1"):
-            HowMany = int(input("How many pieces?: "))
-            print("The price is: ", Products[0][1] * HowMany)
-            print("And then in stock: ", Products[0][2] - HowMany)
-    if (choice == "2"):
+        if choice == "1":
+            how_many = int(input("How many pieces?: "))
+            print("The price is: ", Products[0][1] * how_many)
+            print("And then in stock: ", Products[0][2] - how_many)
+    if choice == "2":
         print("The price is:", Products[1][1], "PLN/net", "In stock: ", Products[1][2])
-        if (choice == "2"):
-            HowMany2 = int(input("How many pieces?: "))
-            print("The price is: ", Products[1][1] * HowMany2)
-            print("And then in stock: ", Products[1][2] - HowMany2)
-    if (choice == "3"):
+        if choice == "2":
+            how_many2 = int(input("How many pieces?: "))
+            print("The price is: ", Products[1][1] * how_many2)
+            print("And then in stock: ", Products[1][2] - how_many2)
+    if choice == "3":
         print("The price is:", Products[2][1], "PLN/net", "In stock: ", Products[2][2])
-        if (choice == "3"):
-            HowMany3 = int(input("How many pieces?: "))
-            print("The price is: ", Products[2][1] * HowMany3)
-            print("And then in stock: ", Products[2][2] - HowMany3)
+        if choice == "3":
+            how_many3 = int(input("How many pieces?: "))
+            print("The price is: ", Products[2][1] * how_many3)
+            print("And then in stock: ", Products[2][2] - how_many3)
 
     decision = input("Do you want to continue (yes/no): ")
     if decision == "yes":
@@ -50,17 +50,17 @@ while decision == True:
 
 print("Ok!")
 
-ActualPrice = Products[0][1] * HowMany
-ActualPrice2 = Products[1][1] * HowMany2
-ActualPrice3 = Products[2][1] * HowMany3
+actual_price = Products[0][1] * how_many
+actual_price2 = Products[1][1] * how_many2
+actual_price3 = Products[2][1] * how_many3
 
-ActualQuantity = Products[0][2] - HowMany
-ActualQuantity2 = Products[1][2] - HowMany2
-ActualQuantity3 = Products[2][2] - HowMany3
+actual_quantity = Products[0][2] - how_many
+actual_quantity2 = Products[1][2] - how_many2
+actual_quantity3 = Products[2][2] - how_many3
 
-HowManyR = 0
-HowManyR2 = 0
-HowManyR3 = 0
+how_many_r = 0
+how_many_r2 = 0
+how_many_r3 = 0
 
 decision2 = input ("Do you want to remove something? yes/no: ")
 if decision2 == "yes":
@@ -73,24 +73,24 @@ else:
 
 while decision2 == True:
     choice2 = input("T-Shirt number: ")
-    if (choice2 == "1"):
-        print("The price is:", Products[0][1], "PLN/net", "In stock: ", ActualQuantity)
-        if (choice2 == "1"):
-            HowManyR = int(input("How many pieces?: "))
-            print("The price is: ", int(ActualPrice) - (Products[0][1] * HowManyR))
-            print("And then in stock: ", ActualQuantity + HowManyR)
-    if (choice2 == "2"):
-        print("The price is:", Products[1][1], "PLN/net", "In stock: ", ActualQuantity2)
-        if (choice2 == "2"):
-            HowManyR2 = int(input("How many pieces?: "))
-            print("The price is: ",  int(ActualPrice2) - (Products[0][1] * HowManyR2))
-            print("And then in stock: ", ActualQuantity2 + HowManyR2)
-    if (choice2 == "3"):
+    if choice2 == "1":
+        print("The price is:", Products[0][1], "PLN/net", "In stock: ", actual_quantity)
+        if choice2 == "1":
+            how_many_r = int(input("How many pieces?: "))
+            print("The price is: ", int(actual_price) - (Products[0][1] * how_many_r))
+            print("And then in stock: ", actual_quantity + how_many_r)
+    if choice2 == "2":
+        print("The price is:", Products[1][1], "PLN/net", "In stock: ", actual_quantity2)
+        if choice2 == "2":
+            how_many_r2 = int(input("How many pieces?: "))
+            print("The price is: ",  int(actual_price2) - (Products[0][1] * how_many_r2))
+            print("And then in stock: ", actual_quantity2 + how_many_r2)
+    if choice2 == "3":
         print("The price is:", Products[2][1], "PLN/net", "In stock: ",ActualQuantity3)
-        if (choice2 == "3"):
-            HowManyR3 = int(input("How many pieces?: "))
-            print("The price is: ",  int(ActualPrice3) - (Products[0][1] * HowManyR3))
-            print("And then in stock: ", ActualQuantity3 + HowManyR3)
+        if choice2 == "3":
+            how_many_r3 = int(input("How many pieces?: "))
+            print("The price is: ",  int(actual_price3) - (Products[0][1] * how_many_r3))
+            print("And then in stock: ", actual_quantity3 + how_many_r3)
 
     decision2 = input("Do you want to remove something? yes/no: ")
     if decision2 == "yes":
@@ -99,9 +99,9 @@ while decision2 == True:
         decision2 = False
         break
 
-TB1_price = Products[0][1] * (HowMany - HowManyR)
-TB2_price = Products[1][1] * (HowMany2 - HowManyR2)
-TB3_price = Products[2][1] * (HowMany3 - HowManyR3)
+TB1_price = Products[0][1] * (how_many - how_many_r)
+TB2_price = Products[1][1] * (how_many2 - how_many_r2)
+TB3_price = Products[2][1] * (how_many3 - how_many_r3)
 
 VAT = 23
 VAT2 = (1 + VAT / 100)
@@ -118,13 +118,3 @@ mobile = input("mobile: ")
 address = input("address: ")
 
 print ("Summary of your order", "\nCost: ", full_price, "PLN/net", "that is", full_price_VAT, "PLN/gross", "\nAddress details:",  name.capitalize(), surname.capitalize(), email,  mobile, address)
-
-
-
-
-
-
-
-
-
-
