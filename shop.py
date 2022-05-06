@@ -4,7 +4,7 @@ Products = [
     ["Gray T-shirt (number 3)", 105, 80]
     ]
 
-print ("Welcome to the T-shirt shop. Everything here is oversize and unisex. I invite you to choose products :)\n")
+print("Welcome to the T-shirt shop. Everything here is oversize and unisex. I invite you to choose products :)\n")
 
 for productName, price, quantity in Products:
     print("Product name:", productName)
@@ -12,9 +12,7 @@ for productName, price, quantity in Products:
     print("In stock:", quantity)
     print("\n")
 
-how_many = 0
-how_many2 = 0
-how_many3 = 0
+how_many, how_many2, how_many3 = 0, 0, 0
 
 decision = True
 while decision == True:
@@ -58,17 +56,15 @@ actual_quantity = Products[0][2] - how_many
 actual_quantity2 = Products[1][2] - how_many2
 actual_quantity3 = Products[2][2] - how_many3
 
-how_many_r = 0
-how_many_r2 = 0
-how_many_r3 = 0
+how_many_r, how_many_r2, how_many_r3 = 0, 0, 0
 
-decision2 = input ("Do you want to remove something? yes/no: ")
+decision2 = input("Do you want to remove something? yes/no: ")
 if decision2 == "yes":
     decision2 = True
 elif decision2 == "no":
     decision2 = False
 else:
-    print ("Wrong answer!")
+    print("Wrong answer!")
     decision2 = input("Do you want to remove something? yes/no: ")
 
 while decision2 == True:
@@ -86,7 +82,7 @@ while decision2 == True:
             print("The price is: ",  int(actual_price2) - (Products[0][1] * how_many_r2))
             print("And then in stock: ", actual_quantity2 + how_many_r2)
     if choice2 == "3":
-        print("The price is:", Products[2][1], "PLN/net", "In stock: ",ActualQuantity3)
+        print("The price is:", Products[2][1], "PLN/net", "In stock: ", actual_quantity3)
         if choice2 == "3":
             how_many_r3 = int(input("How many pieces?: "))
             print("The price is: ",  int(actual_price3) - (Products[0][1] * how_many_r3))
@@ -108,14 +104,13 @@ VAT2 = (1 + VAT / 100)
 full_price = tb1_price + tb2_price + tb3_price
 full_price_VAT = full_price * VAT2
 
-print ("The price is: ", full_price, "PLN/net", "that is", full_price_VAT, "PLN/gross")
+print("The price is: ", full_price, "PLN/net", "that is", full_price_VAT, "PLN/gross")
 
-print ("Now, please enter your shipping details. ")
-name = input(str ("Name: "))
+print("Now, please enter your shipping details. ")
+name = input(str("Name: "))
 surname = input(str("Surname: "))
 email = input(str("e-mail: "))
 mobile = input("mobile: ")
 address = input("address: ")
 
-print ("Summary of your order", "\nCost: ", full_price, "PLN/net", "that is", full_price_VAT, "PLN/gross", "\nAddress details:",  name.capitalize(), surname.capitalize(), email,  mobile, address)
-
+print("Summary of your order", "\nCost: ", full_price, "PLN/net", "that is", full_price_VAT, "PLN/gross", "\nAddress details:",  name.capitalize(), surname.capitalize(), email,  mobile, address)
