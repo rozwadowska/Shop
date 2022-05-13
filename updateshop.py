@@ -93,8 +93,7 @@ while decision2 == True:
         decision2 = False
         break
 
-tb1_price, tb2_price, tb3_price = tshirt1.price * (how_many - how_many_r), tshirt2.price * (
-        how_many2 - how_many_r2), tshirt3.price * (how_many3 - how_many_r3)
+tb1_price, tb2_price, tb3_price = tshirt1.price * (how_many - how_many_r), tshirt2.price * (how_many2 - how_many_r2), tshirt3.price * (how_many3 - how_many_r3)
 
 total_quantity = actual_quantity + actual_quantity2 + actual_quantity3
 
