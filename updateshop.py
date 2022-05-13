@@ -117,7 +117,6 @@ def check(email_address):
     else:
         print("Invalid")
 
-
 while __name__ == '__main__':
     email = input("email: ")
     check(email)
